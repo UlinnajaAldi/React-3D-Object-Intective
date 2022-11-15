@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+@layer components {
+  .text--active {
+    @apply text-seconday text-lg font-semibold;
+  }
+  .text--noactive {
+    @apply text-black text-lg font-semibold hover:text--active;
+  }
+  .button--landing {
+    @apply py-3 px-5 rounded-md border-2 font-semibold text-sm border-[#9F9F9F] hover:bg-black hover:border-black hover:text-white;
+  }
+}
