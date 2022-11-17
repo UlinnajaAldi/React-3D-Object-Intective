@@ -1,9 +1,14 @@
-import RoomSpline from "../components/RoomSpline";
+import React from "react";
+import { NavigationBar } from "../components/NavigationBar";
+import Switch from "../components/Switch";
 
 export const ItemsPage = () => {
   return (
-    <div className="h-[100vh]">
-      <RoomSpline />
-    </div>
+    <>
+      <NavigationBar />
+      <div className="h-[80vh]">
+        <Switch />
+      </div>
+    </>
   );
 };

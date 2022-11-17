@@ -17,7 +17,7 @@ export const NavigationBar = () => {
           <Link to={"/"} className="text--noactive">
             How it Works
           </Link>
-          <Link to={"/"} className="text--noactive">
+          <Link to={"/items-list"} className="text--noactive">
             Interactive Items
           </Link>
         </div>
