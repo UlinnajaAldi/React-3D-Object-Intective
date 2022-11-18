@@ -1,12 +1,10 @@
 import React from "react";
-import { NavigationBar } from "../components/NavigationBar";
 import BlurredBG from "../assets/blurredbg.png";
 import RoomSpline from "../components/RoomSpline";
 
 export const LandingPage = () => {
   return (
     <div>
-      <NavigationBar />
       <div className="flex justify-between mx-32 my-28">
         <div className="w-[35rem] select-none">
           <h1 className="font-bold text-6xl leading-[4.375rem]">

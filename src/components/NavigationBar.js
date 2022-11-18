@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Logo from "../assets/Logo.svg";
 
 export const NavigationBar = () => {
@@ -11,15 +11,30 @@ export const NavigationBar = () => {
 
       <div className="col-span-2 justify-self-center">
         <div className="flex gap-12">
-          <Link to={"/"} className="text--active">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "text--active" : "text--noactive"
+            }
+          >
             About
-          </Link>
-          <Link to={"/"} className="text--noactive">
+          </NavLink>
+          <NavLink
+            to="/introduce"
+            className={({ isActive }) =>
+              isActive ? "text--active" : "text--noactive"
+            }
+          >
             How it Works
-          </Link>
-          <Link to={"/items-list"} className="text--noactive">
+          </NavLink>
+          <NavLink
+            to="/items-list"
+            className={({ isActive }) =>
+              isActive ? "text--active" : "text--noactive"
+            }
+          >
             Interactive Items
-          </Link>
+          </NavLink>
         </div>
       </div>
 

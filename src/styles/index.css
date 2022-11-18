@@ -10,7 +10,7 @@ body {
 
 @layer components {
   .text--active {
-    @apply text-seconday text-lg font-semibold;
+    @apply text-secondary text-lg font-semibold;
   }
   .text--noactive {
     @apply text-black text-lg font-semibold hover:text--active;
