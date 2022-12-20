@@ -4,6 +4,7 @@ import { NavigationBar } from "./components/NavigationBar";
 import { LandingPage } from "./pages/LandingPage";
 import { ItemsPage } from "./pages/ItemsPage";
 import { Introduce } from "./pages/Introduce";
+import { UnderContruction } from "./pages/UnderContruction";
 
 export const App = () => {
   const paths = [
@@ -18,6 +19,10 @@ export const App = () => {
     {
       path: "/introduce",
       element: <Introduce />,
+    },
+    {
+      path: "/*",
+      element: <UnderContruction />,
     },
   ];
 
