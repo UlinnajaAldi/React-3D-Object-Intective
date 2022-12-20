@@ -8,13 +8,13 @@ export const LandingPage = () => {
       <div className="flex justify-between mx-32 my-28">
         <div className="w-[35rem] select-none">
           <h1 className="font-bold text-6xl leading-[4.375rem]">
-            Boost Your
-            <span className="font-semibold"> Startup Busisness Faster</span>
+            Welcome To <br />
+            <span className="font-semibold">Our 3D World Journey!</span>
           </h1>
           <p className="my-8 leading-7 font-normal">
-            Pharetra blandit augue volutpat libero augue semper. Non diam neque
-            praesent sem senectus mauris lectus a urna. Tortor pellentesque
-            ipsum tincidunt enim.
+            Experience an extraordinary visual journey with our latest
+            technology. We offer cutting-edge 3D solutions for various needs,
+            from product design to architecture visualization.
           </p>
           <button
             className="px-16 py-5 border-4 border-white text-white font-extrabold rounded-full drop-shadow-xl

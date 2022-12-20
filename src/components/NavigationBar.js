@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "../assets/Logo.svg";
+import { Link } from "react-router-dom";
 
 export const NavigationBar = () => {
   return (
@@ -25,7 +26,7 @@ export const NavigationBar = () => {
               isActive ? "text--active" : "text--noactive"
             }
           >
-            How it Works
+            Pura Testing
           </NavLink>
           <NavLink
             to="/items-list"
@@ -33,15 +34,19 @@ export const NavigationBar = () => {
               isActive ? "text--active" : "text--noactive"
             }
           >
-            Interactive Items
+            Saklar
           </NavLink>
         </div>
       </div>
 
       <div className="justify-self-end">
         <div className="flex items-center gap-6">
-          <button className="button--landing">Sign up</button>
-          <button className="button--landing">Log in</button>
+          <Link to={"/sign-up"} className="button--landing">
+            Sign up
+          </Link>
+          <Link to={"/log-in"} className="button--landing">
+            Log in
+          </Link>
         </div>
       </div>
     </div>
