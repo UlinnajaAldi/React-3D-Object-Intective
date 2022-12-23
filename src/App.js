@@ -1,39 +1,25 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/navigation-bar/navbar-component";
-import { LandingPage } from "./pages/LandingPage";
-import { ItemsPage } from "./pages/ItemsPage";
-import { Introduce } from "./pages/Introduce";
-import { UnderContruction } from "./pages/UnderContruction";
+import { Loading } from "./components/loading/Loading";
+
+const LandingPage = lazy(() => import("./pages/LandingPage"));
+const ItemsPage = lazy(() => import("./pages/ItemsPage"));
+const Introduce = lazy(() => import("./pages/Introduce"));
+const UnderContruction = lazy(() => import("./pages/UnderContruction"));
 
 export const App = () => {
-  const paths = [
-    {
-      path: "/",
-      element: <LandingPage />,
-    },
-    {
-      path: "/items-list",
-      element: <ItemsPage />,
-    },
-    {
-      path: "/introduce",
-      element: <Introduce />,
-    },
-    {
-      path: "/*",
-      element: <UnderContruction />,
-    },
-  ];
-
   return (
     <>
       <Navbar />
-      <Routes>
-        {paths.map((item, index) => (
-          <Route key={index} {...item} />
-        ))}
-      </Routes>
+      <Suspense fallback={<Loading />}>
+        <Routes>
+          <Route path="/*" element={<UnderContruction />} />
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/items-list" element={<ItemsPage />} />
+          <Route path="/introduce" element={<Introduce />} />
+        </Routes>
+      </Suspense>
     </>
   );
 };
