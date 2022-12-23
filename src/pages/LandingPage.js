@@ -2,7 +2,7 @@ import React from "react";
 import BlurredBG from "../assets/blurredbg.png";
 import RoomSpline from "../assets/objects/RoomSpline";
 
-export const LandingPage = () => {
+const LandingPage = () => {
   return (
     <div>
       <div className="flex justify-between mx-32 my-28">
@@ -34,3 +34,5 @@ export const LandingPage = () => {
     </div>
   );
 };
+
+export default LandingPage;

@@ -1,6 +1,6 @@
 import React from "react";
 
-export const UnderContruction = () => {
+const UnderContruction = () => {
   return (
     <div class="flex items-center justify-center mt-20">
       <div class="flex flex-col items-center justify-center max-w-2xl">
@@ -19,3 +19,5 @@ export const UnderContruction = () => {
     </div>
   );
 };
+
+export default UnderContruction;
