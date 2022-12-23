@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { NavigationBar } from "./components/NavigationBar";
+import { Navbar } from "./components/navigation-bar/navbar-component";
 import { LandingPage } from "./pages/LandingPage";
 import { ItemsPage } from "./pages/ItemsPage";
 import { Introduce } from "./pages/Introduce";
@@ -28,7 +28,7 @@ export const App = () => {
 
   return (
     <>
-      <NavigationBar />
+      <Navbar />
       <Routes>
         {paths.map((item, index) => (
           <Route key={index} {...item} />

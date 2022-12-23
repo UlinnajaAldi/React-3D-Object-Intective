@@ -1,5 +1,5 @@
 import React from "react";
-import Switch from "../components/Switch";
+import Switch from "../assets/objects/Switch";
 
 export const ItemsPage = () => {
   return (

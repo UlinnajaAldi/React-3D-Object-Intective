@@ -1,6 +1,6 @@
 import React from "react";
 import BlurredBG from "../assets/blurredbg.png";
-import RoomSpline from "../components/RoomSpline";
+import RoomSpline from "../assets/objects/RoomSpline";
 
 export const LandingPage = () => {
   return (

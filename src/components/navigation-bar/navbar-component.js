@@ -1,9 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import Logo from "../assets/Logo.svg";
+import Logo from "../../assets/Logo.svg";
 import { Link } from "react-router-dom";
 
-export const NavigationBar = () => {
+export const Navbar = () => {
   return (
     <div className="grid grid-cols-4 justify-items-stretch place-items-center mx-32 my-11">
       <div>
@@ -26,7 +26,7 @@ export const NavigationBar = () => {
               isActive ? "text--active" : "text--noactive"
             }
           >
-            Pura Testing
+            List Items
           </NavLink>
           <NavLink
             to="/items-list"
@@ -34,7 +34,7 @@ export const NavigationBar = () => {
               isActive ? "text--active" : "text--noactive"
             }
           >
-            Saklar
+            How To Use
           </NavLink>
         </div>
       </div>

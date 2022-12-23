@@ -1,5 +1,5 @@
 import React from "react";
-import Toner from "../components/Toner";
+import Toner from "../assets/objects/Toner";
 
 export const Introduce = () => {
   return (
