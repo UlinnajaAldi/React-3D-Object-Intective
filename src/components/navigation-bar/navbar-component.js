@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "../../assets/Logo.svg";
-import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   return (
@@ -21,7 +20,7 @@ export const Navbar = () => {
             About
           </NavLink>
           <NavLink
-            to="/introduce"
+            to="/items-list"
             className={({ isActive }) =>
               isActive ? "text--active" : "text--noactive"
             }
@@ -29,7 +28,7 @@ export const Navbar = () => {
             List Items
           </NavLink>
           <NavLink
-            to="/items-list"
+            to="/introduce"
             className={({ isActive }) =>
               isActive ? "text--active" : "text--noactive"
             }
@@ -40,14 +39,27 @@ export const Navbar = () => {
       </div>
 
       <div className="justify-self-end">
-        <div className="flex items-center gap-6">
-          <Link to={"/sign-up"} className="button--landing">
+        <a
+          href="https://github.com/ulinnajaaldi"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-3 hover:text-secondary"
+        >
+          <h3 className="font-semibold text-lg">Ulinnaja Aldi</h3>
+          <div className="flex items-center">
+            <img
+              src="https://i.ibb.co/6yNLmjS/1671129790285-1.jpg"
+              alt="Foto profil John Doe"
+              className="w-10 h-10 rounded-full"
+            />
+          </div>
+          {/* <Link to={"/sign-up"} className="button--landing">
             Sign up
           </Link>
           <Link to={"/log-in"} className="button--landing">
             Log in
-          </Link>
-        </div>
+          </Link> */}
+        </a>
       </div>
     </div>
   );
