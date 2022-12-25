@@ -17,6 +17,7 @@ const items = [
     name: "Switch 3",
     desc: "The switch is like in general and can be clicked",
   },
+
   {
     id: 4,
     image: "https://picsum.photos/seed/picsum/400/400",
@@ -55,4 +56,20 @@ const items = [
   },
 ];
 
-export default items;
+function getItem(id) {
+  if (!id) {
+    return null;
+  }
+
+  const filteredItem = items.filter((item) => item.id === id);
+
+  if (!filteredItem.length) {
+    return null;
+  }
+
+  return filteredItem[0];
+}
+
+const itemsModule = { items, getItem };
+
+export default itemsModule;

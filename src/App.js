@@ -6,7 +6,7 @@ import { Loading } from "./components/loading/Loading";
 const LandingPage = lazy(() => import("./pages/LandingPage"));
 const ItemsPage = lazy(() => import("./pages/ItemsPage"));
 const Introduce = lazy(() => import("./pages/Introduce"));
-const Detail = lazy(() => import("./pages/Detail"));
+const DetailPage = lazy(() => import("./pages/DetailPage"));
 const UnderContruction = lazy(() => import("./pages/UnderContruction"));
 
 export const App = (props) => {
@@ -15,8 +15,8 @@ export const App = (props) => {
     { path: "/items-list", element: <ItemsPage /> },
     { path: "/introduce", element: <Introduce /> },
     {
-      path: "/detail/:name",
-      element: <Detail />,
+      path: "/detail/:id",
+      element: <DetailPage />,
     },
     { path: "*", element: <UnderContruction /> },
   ];

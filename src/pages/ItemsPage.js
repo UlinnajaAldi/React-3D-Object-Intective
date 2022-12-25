@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import Card from "../components/card/Card";
-import items from "../utils/items";
+import itemsModule from "../utils/items";
+import { Link } from "react-router-dom";
 
 const ItemsPage = (props) => {
+  const items = itemsModule.items;
+
   const [objectItems, setObjectItems] = useState(items.slice(0, 3));
 
   const shouldShowOrLess = () => objectItems.length < items.length;
@@ -22,12 +25,13 @@ const ItemsPage = (props) => {
     <>
       <div className="grid grid-cols-3 gap-6 place-content-center mx-32 my-6">
         {objectItems.map((item) => (
-          <Card
+          <Link
+            to={`/detail/${item.id}`}
+            className="flex items-center justify-center"
             key={item.id}
-            image={item.image}
-            name={item.name}
-            desc={item.desc}
-          />
+          >
+            <Card image={item.image} name={item.name} desc={item.desc} />
+          </Link>
         ))}
       </div>
       <div className="flex justify-center p-10">
